@@ -13,7 +13,7 @@ const getTopics = async () => {
     if (!response.ok) {
       throw new Error("Failed to fetch topics");
     }
-    return response.json();
+    return await response.json();
   } catch (error) {
     console.log("Error loading topics", error);
   }
